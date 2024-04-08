@@ -1,44 +1,107 @@
-usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]
-           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
-           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]
-           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
-           [--config-env=<name>=<envvar>] <command> [<args>]
+**Connect Four Game**
 
-These are common Git commands used in various situations:
+Welcome to the Connect Four Game repository! This project aims to implement the classic Connect Four game in Java.
 
-start a working area (see also: git help tutorial)
-   clone     Clone a repository into a new directory
-   init      Create an empty Git repository or reinitialize an existing one
+## Table of Contents
+- [Introduction](#introduction)
+- [Features](#features)
+- [Getting Started](#getting-started)
+  - [Prerequisites](#prerequisites)
+  - [Clone the Repository](#clone-the-repository)
+  - [Setup and Build](#setup-and-build)
+- [Contributing](#contributing)
+- [License](#license)
 
-work on the current change (see also: git help everyday)
-   add       Add file contents to the index
-   mv        Move or rename a file, a directory, or a symlink
-   restore   Restore working tree files
-   rm        Remove files from the working tree and from the index
+## Introduction
 
-examine the history and state (see also: git help revisions)
-   bisect    Use binary search to find the commit that introduced a bug
-   diff      Show changes between commits, commit and working tree, etc
-   grep      Print lines matching a pattern
-   log       Show commit logs
-   show      Show various types of objects
-   status    Show the working tree status
+Connect Four is a two-player game in which the players take turns dropping colored discs into a grid. The objective is to be the first to form a horizontal, vertical, or diagonal line of four discs of your color.
 
-grow, mark and tweak your common history
-   branch    List, create, or delete branches
-   commit    Record changes to the repository
-   merge     Join two or more development histories together
-   rebase    Reapply commits on top of another base tip
-   reset     Reset current HEAD to the specified state
-   switch    Switch branches
-   tag       Create, list, delete or verify a tag object signed with GPG
+This repository provides a Java implementation of the Connect Four game. The project consists of both server and client components. The server manages the game state and coordinates the actions of the players, while the client allows players to connect and play the game.
 
-collaborate (see also: git help workflows)
-   fetch     Download objects and refs from another repository
-   pull      Fetch from and integrate with another repository or a local branch
-   push      Update remote refs along with associated objects
+## Features
 
-'git help -a' and 'git help -g' list available subcommands and some
-concept guides. See 'git help <command>' or 'git help <concept>'
-to read about a specific subcommand or concept.
-See 'git help git' for an overview of the system.
+- Server-client architecture for multiplayer gameplay
+- Interactive console-based user interface
+- Fully functional Connect Four gameplay
+- Clear and concise codebase for easy understanding and extension
+
+## Getting Started
+
+### Prerequisites
+
+To run this project, you need to have Java Development Kit (JDK) installed on your system. You can download and install the latest JDK from the [official Oracle website](https://www.oracle.com/java/technologies/javase-jdk16-downloads.html).
+
+### Clone the Repository
+
+To clone this repository to your local machine, use the following command:
+
+```
+git clone https://github.com/your-username/connect-four-game.git
+```
+
+### Setup and Build
+
+1. Navigate to the project directory:
+
+```
+cd connect-four-game
+```
+
+2. Compile the source code:
+
+```
+javac engine/*.java model/*.java client/*.java
+```
+
+3. Run the server:
+
+```
+java engine.ConnectFourServer
+```
+
+4. Run the client:
+
+```
+java client.ConnectFourClient
+```
+
+## Contributing
+
+We welcome contributions from the community to improve the Connect Four game. To contribute, follow these steps:
+
+1. Fork the repository by clicking on the "Fork" button on the top right corner of this page.
+
+2. Clone your forked repository to your local machine:
+
+```
+git clone https://github.com/your-username/connect-four-game.git
+```
+
+3. Create a new branch for your changes:
+
+```
+git checkout -b feature/new-feature
+```
+
+4. Make your desired changes to the codebase.
+
+5. Commit your changes with a descriptive commit message:
+
+```
+git commit -m "Add new feature: your-feature-description"
+```
+
+6. Push your changes to your forked repository:
+
+```
+git push origin feature/new-feature
+```
+
+7. Finally, open a pull request from your forked repository to the original repository, describing the changes you've made.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+---
+Feel free to contribute to this project and make Connect Four even better! If you encounter any issues or have suggestions for improvements, please open an issue on the GitHub repository. Thank you for your interest and happy gaming!
