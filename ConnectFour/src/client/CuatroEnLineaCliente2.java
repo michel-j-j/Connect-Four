@@ -1,9 +1,9 @@
-package engine;
+package client;
 
 import java.io.*;
 import java.net.*;
 
-public class CuatroEnLineaCliente {
+public class CuatroEnLineaCliente2 {
     private static final String SERVIDOR_IP = "localhost";
     private static final int PUERTO = 12345;
 

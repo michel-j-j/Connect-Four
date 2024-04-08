@@ -3,6 +3,8 @@ package engine;
 import java.io.*;
 import java.net.*;
 
+import model.CuatroEnLinea;
+
 public class CuatroEnLineaServidor {
     private static final int PUERTO = 12345;
     private static ServerSocket servidor;

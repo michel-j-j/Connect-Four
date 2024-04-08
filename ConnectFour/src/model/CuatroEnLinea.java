@@ -1,4 +1,4 @@
-package engine;
+package model;
 
 public class CuatroEnLinea {
     private static final int FILAS = 6;
