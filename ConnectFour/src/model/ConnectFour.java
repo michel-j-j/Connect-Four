@@ -1,11 +1,11 @@
 package model;
 
-public class CuatroEnLinea {
+public class ConnectFour {
     private static final int FILAS = 6;
     private static final int COLUMNAS = 7;
     private char[][] tablero = new char[FILAS][COLUMNAS];
 
-    public CuatroEnLinea() {
+    public ConnectFour() {
         inicializarTablero();
     }
 
@@ -17,7 +17,7 @@ public class CuatroEnLinea {
         } 
     }
 
-    public String getTablero() {
+    public String getBoard() {
         StringBuilder sb = new StringBuilder();
         sb.append(" 1 2 3 4 5 6 7\n");
         for (int i = 0; i < FILAS; i++) {
@@ -30,7 +30,7 @@ public class CuatroEnLinea {
         return sb.toString();
     }
 
-    public void colocarFicha(int columna, char jugador) {
+    public void dropPiece(int columna, char jugador) {
         for (int i = FILAS - 1; i >= 0; i--) {
             if (tablero[i][columna] == '\u0000') {
                 tablero[i][columna] = jugador;
@@ -39,7 +39,7 @@ public class CuatroEnLinea {
         }
     }
 
-    public boolean haGanado(char jugador) {
+    public boolean hasWinner(char jugador) {
         // Verificar horizontalmente
         for (int fila = 0; fila < FILAS; fila++) {
             for (int columna = 0; columna <= COLUMNAS - 4; columna++) {
@@ -83,7 +83,7 @@ public class CuatroEnLinea {
         return false;
     }
 
-    public boolean tableroLleno() {
+    public boolean isBoardFull() {
         for (int i = 0; i < FILAS; i++) {
             for (int j = 0; j < COLUMNAS; j++) {
                 if (tablero[i][j] == '\u0000') {
@@ -94,7 +94,7 @@ public class CuatroEnLinea {
         return true;
     }
 
-    public boolean haTerminado() {
-        return haGanado('X') || haGanado('O') || tableroLleno();
+    public boolean isGameOver() {
+        return hasWinner('X') || hasWinner('O') || isBoardFull();
     }
 }
